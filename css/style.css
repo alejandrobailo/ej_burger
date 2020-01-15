@@ -1,0 +1,387 @@
+@import url(../css/reset.css);
+@import url("https://fonts.googleapis.com/css?family=Handlee|Montserrat:400,700&display=swap");
+
+/*
+font-family: 'Montserrat', sans-serif;
+font-family: 'Handlee', cursive; 
+color rojo: #fa573a
+color azul: #21242e
+*/
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1em;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  display: block;
+  height: auto;
+}
+/* Inicio header  */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 4%;
+}
+
+.container-fluid {
+  width: 100%;
+}
+
+header .nav_top {
+  /* Duda variables  */
+  background-color: #21242e;
+  color: white;
+  padding: 20px 0;
+}
+
+header .nav_top .container div {
+  float: left;
+  width: 25%;
+}
+
+/* Flotaciones  (::before solo romperia floats hacia arriba no hacia abajo)  */
+
+.row::after {
+  clear: both;
+  content: "";
+  height: 0;
+  display: block;
+}
+
+header .nav_top a {
+  color: white;
+  font-size: 150%;
+  /* Ponemos la fuente porcentual  */
+}
+
+header .nav_top a span {
+  display: none;
+}
+
+header .nav_top a i {
+  color: #fa573a;
+}
+
+header .nav_top .container div:nth-child(3),
+header .nav_top .container div:last-child {
+  text-align: right;
+}
+
+header nav {
+  padding: 20px 3%;
+}
+
+header .hamburguesa div {
+  border-top: 4px solid #aaa;
+  width: 1.875em;
+  margin-bottom: 6px;
+  border-radius: 4px;
+}
+
+header .hamburguesa {
+  cursor: pointer;
+  float: right;
+}
+
+header nav .logo {
+  float: left;
+  width: 100px;
+}
+
+header nav .menu {
+  padding-top: 60px;
+}
+
+header nav .menu li {
+  padding: 1.25em;
+  text-align: center;
+  border-bottom: 1px solid #aaa;
+}
+
+header nav .menu li:last-child {
+  border: none;
+}
+
+header nav .menu li a {
+  color: #aaa;
+  display: block;
+}
+
+header nav .menu li a:hover,
+header nav .menu li a.activo {
+  color: #fa573a;
+}
+
+/* Hero  */
+
+.hero {
+  /* background: [background-image] [background-position] / [background-size] [background-repeat] [background-attachment] [background-origin] [background-clip] [background-color]; */
+  background: url("../img/fondo.jpg") center center / cover no-repeat #222;
+  background-attachment: fixed;
+  height: 34em;
+  background-blend-mode: soft-light;
+}
+
+.hero > div {
+  color: white;
+  padding: 15% 3%;
+}
+
+.hero h1 {
+  font-size: 2.5em;
+  font-family: "Handlee", cursive;
+}
+
+.hero h2 {
+  margin: 1em 0;
+  /* Cuando no hay color de fondo padding y margin valen para lo mismo  */
+  color: #fa573a;
+  font-size: 1.25em;
+}
+
+.hero p {
+  font-size: 1.15em;
+}
+
+.boton {
+  display: inline-block;
+  padding: 1.15em;
+  margin: 1em 0;
+  background-color: #fa573a;
+  color: white;
+  border-radius: 2px;
+  /* para evitar el salto del hover, tambian podria aplicar el borde a esta clase en rojo y luego quitarlo del hover ya que el fondo es transparente */
+  border: 1px solid transparent;
+}
+
+.boton:hover {
+  background: transparent;
+  color: #fa573a;
+  border: 1px solid #fa573a;
+}
+
+.boton:hover i {
+  transform: translateX(5px);
+  transition: transform 1s;
+}
+
+.social li {
+  display: inline-block;
+  font-size: 2.1em;
+  margin-right: 1em;
+}
+
+.social li a {
+  color: white;
+}
+
+main section.container {
+  padding-top: 3.125em;
+  padding-bottom: 3.125em;
+}
+
+main section h2 {
+  font-family: "Handlee", cursive;
+  color: black;
+  font-size: 2em;
+  text-align: center;
+}
+
+main section span {
+  color: #fa573a;
+}
+
+main section .underline {
+  position: relative;
+  width: 120px;
+  margin: 0 auto;
+}
+
+main section .underline span {
+  color: #fa573a;
+  display: block;
+  text-align: center;
+  font-weight: bold;
+}
+
+main section .underline hr {
+  position: absolute;
+  border-color: #fa573a;
+  width: 100%;
+  top: -1px;
+  border-radius: 1px;
+}
+
+main section .flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+main section .flex article {
+  width: 100%;
+  padding: 1.825em 0;
+  border-bottom: 1px solid #aaa;
+}
+
+main section .flex article:last-child {
+  border-bottom: none;
+}
+
+main section article div i {
+  color: #fa573a;
+  font-size: 2em;
+  border: 2px solid #fa573a;
+  outline: 2px solid #fa573a;
+  outline-offset: -10px;
+  padding: 0.8rem;
+}
+
+main section article div .fa-truck {
+  transform: rotateY(180deg);
+}
+
+main section article h3 {
+  font-weight: 700;
+  margin: 1em 0;
+  color: #21242e;
+}
+
+main section .enlace {
+  color: #fa573a;
+  display: block;
+  font-weight: bold;
+  margin-top: 0.5em;
+}
+main section .enlace:hover i {
+  margin-left: 5px;
+  transition: 0.5s;
+}
+
+main section .columna {
+  width: 100%;
+  padding: 1.25em 0;
+}
+
+main section .imagen {
+  width: 85%;
+  margin: 0 auto;
+}
+/* Para hacer esta trasicion movemos el borde del contenedor, lo que movera la imagen consigo porlo tanto devolvemos la imagen a su posicion inicial con el mismo valor en negativo para que solo se mueva el marco 10, -10. Luego los dos a posicion 0 para acabar la transicion. */
+main section .imagen .marco {
+  border: 3px solid #fa573a;
+  background-color: transparent;
+  transform: rotateZ(10deg);
+  transition: 1s;
+}
+
+main section .imagen .marco img {
+  transform: rotateZ(-10deg);
+  transition: 1s;
+}
+
+main section .imagen:hover .marco,
+main section .imagen:hover img {
+  transform: rotateZ(0deg);
+  transition: 1s;
+}
+
+div.columna h3 {
+  font-weight: 700;
+  margin: 1em 0;
+  color: #21242e;
+}
+
+div.columna h4 {
+  color: #fa573a;
+  margin: 1em 0;
+}
+
+footer.container-fluid {
+  background-color: #21242e;
+  padding: 1em 0;
+}
+
+footer div.container,
+footer div.container a {
+  color: white;
+}
+
+@media only screen and (min-width: 48.063em) {
+  header .nav_top a span {
+    display: inline;
+    font-size: 60%;
+  }
+
+  main section .flex article {
+    width: 50%;
+    padding: 1.825em 1em;
+    border-bottom: 0;
+    border-left: 1px solid #aaa;
+    margin-bottom: 1em;
+  }
+
+  main section .flex article:last-child {
+    width: 100%;
+  }
+
+  main section .underline {
+    margin-bottom: 2em;
+  }
+}
+
+@media only screen and (min-width: 62.75em) {
+  header .hamburguesa {
+    display: none;
+  }
+
+  header nav .menu {
+    padding-top: 0;
+    float: right;
+  }
+
+  header nav .menu li {
+    padding: 0.5em 1.25em;
+    text-align: left;
+    border-bottom: none;
+    display: inline-block;
+  }
+
+  header nav .menu li:last-child {
+    padding-right: 0;
+  }
+
+  main section .columna {
+    width: 50%;
+    padding: 1.25em 1em;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  main section .flex article {
+    width: 33.33%;
+  }
+
+  main section .flex article:last-child {
+    width: 33.33%;
+  }
+
+  .hero > div {
+    color: white;
+    padding: 7% 4%;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+}
