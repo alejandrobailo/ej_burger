@@ -1,3 +1,5 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
 @import url(../css/reset.css);
 @import url("https://fonts.googleapis.com/css?family=Handlee|Montserrat:400,700&display=swap");
 
@@ -8,7 +10,12 @@ color rojo: #fa573a
 color azul: #21242e
 */
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+         
 }
 
 html {
@@ -28,7 +35,8 @@ body::before {
   left: 0;
   width: 100%;
   height: 10px;
-  box-shadow: 0px 0 10px rgba(0, 0, 0, 0.8);
+  -webkit-box-shadow: 0px 0 10px rgba(0, 0, 0, 0.8);
+          box-shadow: 0px 0 10px rgba(0, 0, 0, 0.8);
   z-index: 100;
 }
 
@@ -85,6 +93,8 @@ header .nav_top a span {
 
 header .nav_top a i {
   color: #fa573a;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
   transition: .3s;
 }
 
@@ -106,6 +116,8 @@ header .hamburguesa div {
   width: 1.875em;
   margin-bottom: 6px;
   border-radius: 4px;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
   transition: .3s;
 }
 
@@ -199,8 +211,14 @@ header nav .menu li a.activo {
 }
 
 .boton:hover i {
-  transform: translateX(5px);
+  -webkit-transform: translateX(5px);
+      -ms-transform: translateX(5px);
+          transform: translateX(5px);
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  -o-transition: transform 1s;
   transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
 }
 
 .social li {
@@ -211,6 +229,8 @@ header nav .menu li a.activo {
 
 .social li a {
   color: white;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
   transition: .3s;
 }
 
@@ -256,8 +276,11 @@ main section .underline hr {
 }
 
 main section .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 main section .flex article {
@@ -271,6 +294,8 @@ main section .flex article:hover div i{
   border-radius: 50%;
   outline: 2px solid #fa573a;
   outline-offset: -12px;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
   transition: .5s;
 }
 
@@ -288,7 +313,8 @@ main section article div i {
 }
 
 main section article div .fa-truck {
-  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
 }
 
 main section article h3 {
@@ -305,6 +331,8 @@ main section .enlace {
 }
 main section .enlace:hover i {
   margin-left: 5px;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
   transition: 0.5s;
 }
 
@@ -321,18 +349,30 @@ main section .imagen {
 main section .imagen .marco {
   border: 3px solid #fa573a;
   background-color: transparent;
-  transform: rotateZ(10deg);
+  -webkit-transform: rotateZ(10deg);
+      -ms-transform: rotate(10deg);
+          transform: rotateZ(10deg);
+  -webkit-transition: 1s;
+  -o-transition: 1s;
   transition: 1s;
 }
 
 main section .imagen .marco img {
-  transform: rotateZ(-10deg);
+  -webkit-transform: rotateZ(-10deg);
+      -ms-transform: rotate(-10deg);
+          transform: rotateZ(-10deg);
+  -webkit-transition: 1s;
+  -o-transition: 1s;
   transition: 1s;
 }
 
 main section .imagen:hover .marco,
 main section .imagen:hover img {
-  transform: rotateZ(0deg);
+  -webkit-transform: rotateZ(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotateZ(0deg);
+  -webkit-transition: 1s;
+  -o-transition: 1s;
   transition: 1s;
 }
 
@@ -423,7 +463,10 @@ footer div.container a {
 }
 
 #chef .flex{
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 #chef .offer-menu{
@@ -435,6 +478,8 @@ footer div.container a {
   color: white;
   border-radius: 3px;
   padding: .5em;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
   transition: .2s;
 }
 
@@ -545,8 +590,11 @@ footer div.container a {
   }
 
   #chef .flex .offer-items {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   #chef .flex .offer-items>div{
     width: 50%;
@@ -611,12 +659,17 @@ footer div.container a {
   }
 
   #chef .flex{
-    flex-direction: row;
-    flex-wrap: nowrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
   }
 
   #chef .flex-left{
-    flex-basis: 30%;
+    -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
   }
 
   #chef .flex-left p{
@@ -628,9 +681,14 @@ footer div.container a {
 }
 
   #chef .flex-right{
-    flex-wrap: wrap;
-    flex-direction: column;
-    flex-basis: 70%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-preferred-size: 70%;
+        flex-basis: 70%;
   }
 
   #chef .flex .offer-items div{
@@ -648,8 +706,13 @@ footer div.container a {
   }
 
   #chef .flex-right>div{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     margin-bottom: 0;
   }
 
@@ -669,5 +732,4 @@ footer div.container a {
     bottom: 0;
     left: 0;
   }
-
 }
