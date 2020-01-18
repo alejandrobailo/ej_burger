@@ -13,6 +13,7 @@ color azul: #21242e
 
 html {
   scroll-behavior: smooth;
+  position: relative;
 }
 
 body {
@@ -73,6 +74,11 @@ header .nav_top a span {
 
 header .nav_top a i {
   color: #fa573a;
+  transition: .3s;
+}
+
+header .nav_top a i:hover {
+  color: white;
 }
 
 header .nav_top .container div:nth-child(3),
@@ -89,12 +95,20 @@ header .hamburguesa div {
   width: 1.875em;
   margin-bottom: 6px;
   border-radius: 4px;
+  transition: .3s;
+}
+
+header .hamburguesa:hover div {
+  margin-bottom: 3px;
+  border-top: 4px solid #fa573a;
+
 }
 
 header .hamburguesa {
   cursor: pointer;
   float: right;
 }
+
 
 header nav .logo {
   float: left;
@@ -319,10 +333,153 @@ footer div.container a {
   color: white;
 }
 
+/* BLOG SECTION */
+#blog article {
+  width: 50%;
+  border: none;
+  padding: 1em;
+}
+
+#blog i{
+  border: none;
+  outline: none;
+  font-size: 1em;
+}
+
+#blog .imagen-blog{
+  position: relative;
+}
+
+#blog .fecha{
+  position: absolute;
+  text-align: center;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  background-color: rgba(250, 87, 58, .7);
+  padding: .5em;
+  height: auto;
+  font-size: 1em;
+  color: white;
+  cursor: pointer;
+}
+
+#blog .fecha p{
+  margin: .5em;
+  font-weight: 700;
+  line-height : 15px;
+  color: white;
+}
+
+#blog h3{
+  color: #21242e;
+  font-size: 1.5em;
+  font-weight: 400;
+}
+
+#blog h4{ 
+  color: #fa573a;
+  font-weight: 700;
+}
+
+#blog p{
+  margin: 1em 0;;
+  line-height : 20px;
+  color: #21242e;
+}
+
+/* Menu section */
+
+#chef{
+  background-color: #1C1C1C;
+  color: white;
+  max-width: 100%;
+  padding-left: 3em;
+  padding-right: 3em;
+
+}
+
+#chef .flex{
+  flex-direction: column;
+}
+
+#chef .offer-menu{
+  margin: 2em 0;;
+}
+
+#chef .offer-menu a{
+  display: block;
+  color: white;
+  border-radius: 3px;
+  padding: .5em;
+}
+
+#chef a:hover{
+  background-color: #fa573a;
+}
+
+#chef h2{
+  color: white;
+}
+
+#chef .offer-header h4{
+  font-weight: 700;
+}
+
+#chef .offer-header div{
+  width: 15%;
+  height: 2px;
+  background-color: #fa573a;
+  margin: 10px 0;
+}
+
+#chef .offer-header p{
+  font-size: .8em;
+  line-height: 20px;
+  margin-bottom: 2em;;
+}
+
+#chef .offer-items{
+  padding-left: 1em;
+}
+
+#chef .offer-items div{
+  margin-bottom: 2em;
+}
+#chef .offer-items h4{
+  font-weight: 700;
+  margin: 1.2em 0;
+  width: 100%;
+}
+
+#chef .offer-items span{
+  float: right;
+}
+
+#chef .offer-items p{
+  font-size: .8em;
+}
+
+#chef .offer-items a{
+  background: none;
+  display: inline-block;
+  padding: .5em 0;
+  color: #fa573a;
+  font-weight: 700;
+  font-size: .8em;
+  border: none;
+}
+
+
+/* Medias  */
 @media only screen and (min-width: 48.063em) {
   header .nav_top a span {
     display: inline;
     font-size: 60%;
+  }
+
+  header .nav_top a span:hover {
+    color: #fa573a;
   }
 
   main section .flex article {
@@ -339,6 +496,15 @@ footer div.container a {
 
   main section .underline {
     margin-bottom: 2em;
+  }
+
+  #chef .flex .offer-items {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #chef .flex .offer-items div{
+    width: 50%;
+    padding: 1em;
   }
 }
 
@@ -367,6 +533,12 @@ footer div.container a {
     width: 50%;
     padding: 1.25em 1em;
   }
+
+  /* BLOG  */
+  #blog article {
+    width: 33.33%;
+  }
+
 }
 
 @media only screen and (min-width: 1200px) {
@@ -383,5 +555,13 @@ footer div.container a {
     padding: 7% 4%;
     max-width: 1100px;
     margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 1281px){
+  footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
   }
 }
