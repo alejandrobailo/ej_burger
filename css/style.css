@@ -14,8 +14,7 @@ color azul: #21242e
           box-sizing: border-box;
           -webkit-appearance: none;
           -moz-appearance: none;
-          appearance: none;
-         
+          appearance: none;         
 }
 
 html {
@@ -168,7 +167,7 @@ header nav .menu li a.activo {
   /* background: [background-image] [background-position] / [background-size] [background-repeat] [background-attachment] [background-origin] [background-clip] [background-color]; */
   background: url("../img/fondo.jpg") center center / cover no-repeat #222;
   background-attachment: fixed;
-  height: 34em;
+  height: 37em;
   background-blend-mode: soft-light;
 }
 
@@ -497,6 +496,7 @@ footer div.container a {
 
 #chef .offer-header div{
   width: 15%;
+  max-width: 50px;
   height: 2px;
   background-color: #fa573a;
   margin: 10px 0;
@@ -589,6 +589,8 @@ footer div.container a {
     margin-bottom: 2em;
   }
 
+  /* CHEF  */
+
   #chef .flex .offer-items {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -600,6 +602,7 @@ footer div.container a {
     width: 50%;
     padding: 1em;
   }
+
 
 }
 
@@ -634,6 +637,74 @@ footer div.container a {
     width: 33.33%;
   }
 
+    /* CHEF  */
+
+    #chef .offer-menu{
+      padding: 0 0 3em 0;
+    }
+  
+    #chef .flex{
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+    }
+  
+    #chef .flex-left{
+      -ms-flex-preferred-size: 30%;
+          flex-basis: 30%;
+    }
+  
+    #chef .flex-left p{
+      width: 70%;
+    }
+  
+    #chef .offer-menu {
+      margin: 0 0 2em 0;
+  }
+  
+    #chef .flex-right{
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -ms-flex-preferred-size: 70%;
+          flex-basis: 70%;
+    }
+  
+    #chef .flex .offer-items div{
+      width: 100%;
+      padding: 0 1em 1em 1em;
+    }
+  
+    #chef .offer-items div div div h5{
+      position: relative;
+    }
+  
+    #chef .flex .offer-items div h4{
+      margin: 0;
+      margin-bottom: 1em;
+    }
+  
+    #chef .flex-right>div{
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      margin-bottom: 0;
+    }
+  
+    #chef .flex-right a{
+      width: 30%;
+      padding: 0;
+    }
 }
 
 @media only screen and (min-width: 75em) {
@@ -652,74 +723,6 @@ footer div.container a {
     margin: 0 auto;
   }
 
-  /* CHEF  */
-
-  #chef .offer-menu{
-    padding: 0 0 3em 0;
-  }
-
-  #chef .flex{
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-  }
-
-  #chef .flex-left{
-    -ms-flex-preferred-size: 30%;
-        flex-basis: 30%;
-  }
-
-  #chef .flex-left p{
-    width: 70%;
-  }
-
-  #chef .offer-menu {
-    margin: 0 0 2em 0;
-}
-
-  #chef .flex-right{
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -ms-flex-preferred-size: 70%;
-        flex-basis: 70%;
-  }
-
-  #chef .flex .offer-items div{
-    width: 100%;
-    padding: 0 1em 1em 1em;
-  }
-
-  #chef .offer-items div div div h5{
-    position: relative;
-  }
-
-  #chef .flex .offer-items div h4{
-    margin: 0;
-    margin-bottom: 1em;
-  }
-
-  #chef .flex-right>div{
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    margin-bottom: 0;
-  }
-
-  #chef .flex-right a{
-    width: 30%;
-    padding: 0;
-  }
 }
 
 @media only screen and (min-width: 80.63em){
@@ -727,9 +730,27 @@ footer div.container a {
     height: 100vh;
   }
 
-  footer{
+  /* footer{
     position: fixed;
     bottom: 0;
     left: 0;
-  }
+
+    No es necesario, en dispositivos con mas resolucion se ajusta automaticamente.
+  } */
+}
+
+.up{
+  display: block;
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  background-color: rgba(250, 87, 58, .8);
+  color: white;
+  padding: 6px;
+  font-size: 1.7em;
+  border-radius: 3px;
+  bottom: 15px;
+  right: 15px;
+  text-align: center;
+  z-index: 99;
 }
