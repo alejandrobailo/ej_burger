@@ -340,6 +340,15 @@ main section .columna {
   padding: 1.25em 0;
 }
 
+main:hover .columna:nth-of-type(2) {
+  transform: translateX(0%);
+  transition: 1s;
+}
+main section .columna:nth-of-type(2) {
+  transform: translateX(250%);
+  overflow: hidden;
+  transition: 1s;
+}
 main section .imagen {
   width: 85%;
   margin: 0 auto;
