@@ -477,9 +477,14 @@ footer div.container a {
   color: white;
   border-radius: 3px;
   padding: .5em;
+  margin-bottom: 0.3em;
   -webkit-transition: .2s;
   -o-transition: .2s;
   transition: .2s;
+}
+
+#chef .offer-menu a:focus{
+  background-color: #fa573a;
 }
 
 #chef a:hover{
